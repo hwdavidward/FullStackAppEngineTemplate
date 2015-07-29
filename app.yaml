@@ -1,0 +1,33 @@
+application: project_id_name
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+handlers:
+
+# Fav Icon
+- url: /favicon.ico
+  static_files: app/static/img/favicon.ico
+  upload: app/static/img/favicon.ico
+
+# Images
+- url: /static/img/(.*\.(jpg|png|ico|gif))
+  static_files: app/static/img/\1
+  upload: app/static/img/(.*\.(jpg|png|ico|gif))
+
+# JS
+- url: /static/js/(.*\.(js|min.map))
+  static_files: app/static/js/\1
+  upload: app/static/js/(.*\.(js|min.map))
+
+# Fonts
+- url: /static/fonts/(.*\.(eot|svg|ttf|woff))
+  static_files: app/static/fonts/\1
+  upload: app/static/fonts/(.*\.(eot|svg|ttf|woff))
+
+# Main App
+- url: .*
+  script: app.register.main_app
+  secure: always

@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 __author__ = 'DavidWard'
 
-from flask.ext.restful import Resource
+from flask.views import View
 
 
-class Index(Resource):
+class Index(View):
 
-    def get(self):
-        print 'INDEX FOUND'
+    def dispatch_request(self):
         return "Welcome"
 
 

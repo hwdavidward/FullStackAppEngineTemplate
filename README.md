@@ -23,3 +23,29 @@ $ ./generate_keys.py
 
 Add all dependencies to the requirements.txt
 $ pip install -r requirements.txt -t lib
+
+
+#################################
+###   GAE Command Reference   ###
+#################################
+
+Rollback:
+    /usr/local/google_appengine/appcfg.py rollback .
+
+Deploy:
+    /usr/local/google_appengine/appcfg.py update app.yaml
+
+Update Dispatch:
+    /usr/local/google_appengine/appcfg.py update_dispatch .
+
+Dev:
+    /usr/local/google_appengine/dev_appserver.py app.yaml
+
+Update Cron:
+    /usr/local/google_appengine/appcfg.py update_cron .
+
+Update Queue:
+    /usr/local/google_appengine/appcfg.py update_queues .
+
+Update Index:
+    /usr/local/google_appengine/appcfg.py update_indexes .

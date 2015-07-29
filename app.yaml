@@ -12,6 +12,11 @@ handlers:
   static_files: app/static/img/favicon.ico
   upload: app/static/img/favicon.ico
 
+# CSS
+- url: /static/css/(.*\.css)
+  static_files: app/static/css/\1
+  upload: app/static/css/(.*\.css)
+
 # Images
 - url: /static/img/(.*\.(jpg|png|ico|gif))
   static_files: app/static/img/\1
